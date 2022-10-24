@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    padding-inline: 50px;
+    padding-block: 20px;
+    justify-content: space-between;
+    .navRight{
+        display: flex;
+        flex-direction: row;
+        gap: 64px;
+        align-items: center;
+    }
+    a{
+        color: #212529;
+        text-decoration: none !important;
+    }
+}
