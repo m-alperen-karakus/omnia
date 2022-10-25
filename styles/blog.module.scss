@@ -3,7 +3,9 @@ div.blog {
     align-items: center;
     flex-direction: column;
     gap: 48px;
-
+    h1{
+        margin:64px 0px 0px 0px;
+    }
     div.cardsAndTag {
         display: flex;
         flex-direction: row;
@@ -14,14 +16,14 @@ div.blog {
             flex-direction: row;
             gap: 48px;
             justify-content: center;
-
+            height: min-content;
             div.card {
                 display: flex;
                 width: 20%;
                 flex-direction: column;
                 gap: 18px;
                 padding: 12px;
-
+                height: min-content;
                 img {
                     border-radius: 24px;
                 }

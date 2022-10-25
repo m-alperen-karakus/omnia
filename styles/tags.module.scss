@@ -1,0 +1,29 @@
+.tags {
+    margin-right: 64px;
+    padding: 32px 64px;
+    background: #FAFAFA;
+    border-radius: 62px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+
+    h1 {
+        font-family: 'Comfortaa', cursive;
+        font-weight: 700;
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    ul {
+        list-style: none;
+        padding-inline: 0px;
+    }
+
+    li {
+        padding: 18px 0px;
+        a{
+            text-decoration: none !important;
+            color: #000000 !important;
+        }
+    }
+}
