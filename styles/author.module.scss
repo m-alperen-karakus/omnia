@@ -1,0 +1,20 @@
+.author{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Comfortaa', cursive !important;
+    font-size: 20px;
+    gap: 18px;
+    align-items: center;
+
+    div.authorName{
+        font-weight: 500;
+        font-size: 15px;
+    }
+    span.articleReadTime{
+        opacity: 0.5 !important;
+        color: #2C3A4B !important;
+        font-size: 12px !important;
+        font-family: 'Poppins', sans-serif;
+    }
+
+}
