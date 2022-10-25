@@ -10,6 +10,12 @@
         flex-direction: row;
         gap: 64px;
         align-items: center;
+        a{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+        }
     }
     a{
         color: #212529;
