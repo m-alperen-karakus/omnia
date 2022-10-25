@@ -1,0 +1,58 @@
+div.blog {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 48px;
+
+    div.cardsAndTag {
+        display: flex;
+        flex-direction: row;
+
+        div.cards {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 48px;
+            justify-content: center;
+
+            div.card {
+                display: flex;
+                width: 20%;
+                flex-direction: column;
+                gap: 18px;
+                padding: 12px;
+
+                img {
+                    border-radius: 24px;
+                }
+
+                h1 {
+                    font-family: 'Comfortaa', cursive;
+                    font-size: 18px;
+                    font-weight: 900;
+                    margin: 0px;
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 15px;
+                    margin-bottom: 0px;
+                }
+                div.buttonGroup{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+
+                    button {
+                        font-weight: 300;
+                        font-size: 12px;
+                        outline: none;
+                        border: none;
+                        background: none;
+                        text-decoration:underline;
+                    }
+                }
+            }
+        }
+    }
+}
