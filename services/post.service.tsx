@@ -16,7 +16,7 @@ export const getPosts = () => {
                 return { ...item.data() , id:item.id}
             }));
         })
-    }) 
+    },[]) 
 
     return posts
 }

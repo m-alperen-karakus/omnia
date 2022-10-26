@@ -23,7 +23,7 @@ export default function Blog(){
            })
        }
        else{
-        return cards
+        return console.log(cards)
        }
 
 
