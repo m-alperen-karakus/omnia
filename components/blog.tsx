@@ -4,20 +4,27 @@ import Author from "./author";
 import style from "../styles/blog.module.scss"
 import { getPosts } from "../services/post.service";
 export default function Blog(){
+       let cards : any
        
-       const cards = getPosts().map((card)=>{   
-        return(
-            <div className={style.card} key= {card.id}>
-                <Image src={card?.backgroundImageURL} width={400} height={200} />
-                <Author {...{...card.author ,"minRead" : card.minRead }} key= {card.id}/>
-                <h1>{card?.title}</h1>
-                <p>{card?.text.substring(0,300)}...</p>
-                <div className={style.buttonGroup}>
-                    <button>Read More</button>
+       if(!cards){
+           
+           cards = getPosts().map((card)=>{   
+            return(
+                <div className={style.card} key= {card.id}>
+                    <Image src={card?.backgroundImageURL} width={400} height={200} />
+                    <Author {...{...card.author ,"minRead" : card.minRead }} key= {card.id}/>
+                    <h1>{card?.title}</h1>
+                    <p>{card?.text.substring(0,300)}...</p>
+                    <div className={style.buttonGroup}>
+                        <button>Read More</button>
+                    </div>
                 </div>
-            </div>
-        )
-       })
+            )
+           })
+       }
+       else{
+        return cards
+       }
 
 
     return(

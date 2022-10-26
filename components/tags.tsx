@@ -26,7 +26,7 @@ export default function Tags() {
     ]
 
     const everyTag = tags.map((item)=>{
-        return <li><Link href="/category">{item}</Link></li>
+        return <li key={item}><Link href="/category">{item}</Link></li>
     })
 
     return (
