@@ -2,7 +2,7 @@ import Tags from "./tags";
 import Image from "next/image";
 import Author from "./author";
 import style from "../styles/blog.module.scss"
-import { getPosts } from "../services/post.service";
+import { getPosts, getPostsByTags } from "../services/post.service";
 export default function Blog(){
        let cards : any
        
@@ -26,7 +26,7 @@ export default function Blog(){
         return console.log(cards)
        }
 
-
+       console.log(getPostsByTags())
     return(
         <div className={style.blog}>
             <h1>Editors Pick</h1>

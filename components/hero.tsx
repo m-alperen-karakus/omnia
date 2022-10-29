@@ -15,7 +15,7 @@ export default function Hero() {
                 <h4>FEATURED ARTICLE</h4>
                 <h1>{featuredPost.title}</h1>
                 <Author {...{...featuredPost.author ,"minRead" : featuredPost.minRead }} key= {featuredPost.id}/>
-                <p>{featuredPost?.text.substring(0,400)}...</p>
+                <p>{featuredPost?.text}...</p>
                 <div className={style.buttonGroup}>
                     <button>Read more</button>
                 </div>

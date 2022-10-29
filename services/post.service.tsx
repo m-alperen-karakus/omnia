@@ -28,7 +28,6 @@ export const getFeaturedPost = () =>{
         const searchedData = query(collectionPath, where("isFeaturedArticle" , "==" , true))
         getDocs(searchedData).then((data)=>{
             setFeaturedPost(data.docs.map((item)=>{
-                    console.log(item.data())
                     return {...item.data() , id:item.id}
                 
             }))
@@ -37,5 +36,22 @@ export const getFeaturedPost = () =>{
 
     return featuredPost
 }
+
+export const getPostsByTags = (tag = "editorsPick") =>{
+    const [posts,setPosts] = useState<DocumentData[]>([]);
+
+    useEffect( ()=>{
+         const collectionPath = collection(db, 'posts');
+         const searchedData = query(collectionPath, where("isFeaturedArticle" , "array-contains" , `${tag}`))
+         getDocs(searchedData).then((data)=>{
+            setPosts(data.docs.map((item)=>{
+                return { ...item.data() , id:item.id}
+            }));
+        })
+    },[]) 
+
+    return posts
+}
+
 
 
