@@ -5,7 +5,7 @@ import { DocumentData, QueryDocumentSnapshot, where } from "firebase/firestore";
 const PostService =() =>{
     
 }
-
+// it turns all of posts
 export const getPosts = () => {
     const [posts,setPosts] = useState<DocumentData[]>([]);
 
@@ -20,6 +20,7 @@ export const getPosts = () => {
 
     return posts
 }
+// it turns all of  featured post
 
 export const getFeaturedPost = () =>{
     const [featuredPost,setFeaturedPost] = useState<DocumentData>([]);
@@ -36,21 +37,23 @@ export const getFeaturedPost = () =>{
 
     return featuredPost
 }
+// it turns all of posts which is have same tag
 
 export const getPostsByTags = (tag = "editorsPick") =>{
-    const [posts,setPosts] = useState<DocumentData[]>([]);
-
+    
+    const [postsByTag,setPostsByTag] = useState<DocumentData[]>([]);
     useEffect( ()=>{
          const collectionPath = collection(db, 'posts');
-         const searchedData = query(collectionPath, where("isFeaturedArticle" , "array-contains" , `${tag}`))
+         const searchedData = query(collectionPath, where("tags" , "array-contains" ,`${tag}`))
+
          getDocs(searchedData).then((data)=>{
-            setPosts(data.docs.map((item)=>{
+            setPostsByTag(data.docs.map((item)=>{
                 return { ...item.data() , id:item.id}
             }));
         })
-    },[]) 
-
-    return posts
+    },[tag]) 
+    
+    return postsByTag
 }
 
 

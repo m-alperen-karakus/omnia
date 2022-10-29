@@ -14,7 +14,7 @@ export default function Blog(){
                     <Image src={card?.backgroundImageURL} width={400} height={200} />
                     <Author {...{...card.author ,"minRead" : card.minRead }} key= {card.id}/>
                     <h1>{card?.title}</h1>
-                    <p>{card?.text.substring(0,300)}...</p>
+                    <p>{card?.text?.substring(0,300)}...</p>
                     <div className={style.buttonGroup}>
                         <button>Read More</button>
                     </div>
@@ -26,10 +26,10 @@ export default function Blog(){
         return console.log(cards)
        }
 
-       console.log(getPostsByTags())
+       
     return(
         <div className={style.blog}>
-            <h1>Editors Pick</h1>
+            <h1>EDITORS PICK</h1>
         <div className={style.cardsAndTag}>
             <div className={style.cards}>
             {cards}
