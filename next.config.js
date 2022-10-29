@@ -11,17 +11,6 @@ const nextConfig = {
     domains: ['firebasestorage.googleapis.com'],
   },
 
-  // basePath:"/index"
-
-  // async redirects(){
-  //   return [
-  //     {
-  //       source: '/index',
-  //       destination: '/',
-  //       permanent: true,
-  //     },
-  //   ]
-  // }
 }
 
 module.exports = nextConfig
