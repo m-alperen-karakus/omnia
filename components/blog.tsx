@@ -8,7 +8,7 @@ export default function Blog(){
        
        if(!cards){
            
-           cards = getPosts().map((card)=>{   
+           cards = getPosts().map((card)=>{
             return(
                 <div className={style.card} key= {card.id}>
                     <Image src={card?.backgroundImageURL} width={400} height={200} />

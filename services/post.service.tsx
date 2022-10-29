@@ -21,3 +21,20 @@ export const getPosts = () => {
     return posts
 }
 
+export const getFeaturedPost = () =>{
+    const [featuredPost,setFeaturedPost] = useState<DocumentData>([]);
+    useEffect( ()=>{
+        const collectionPath = collection(db, 'posts');
+        getDocs(collectionPath).then((data)=>{
+            setFeaturedPost(data.docs.map((item)=>{
+                if(item?.data().isFeaturedArticle){
+                    return {...item.data() , id:item.id}
+                }
+            }))
+        })
+    },[])
+
+    return featuredPost
+}
+
+
