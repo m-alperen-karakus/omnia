@@ -51,7 +51,9 @@ div.blog {
                         outline: none;
                         border: none;
                         background: none;
-                        text-decoration:underline;
+                        a{
+                            color: black;
+                        }
                     }
                 }
             }

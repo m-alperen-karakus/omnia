@@ -12,6 +12,8 @@ import Hero from '../../components/hero'
 export default function Tag() {
   const router = useRouter();
   const { tag } = router.query;
+
+
   const upperCaseTag = (`${tag}`).toLocaleUpperCase()
   const cards = getPostsByTags(`${tag}`).map(card => {
     return(

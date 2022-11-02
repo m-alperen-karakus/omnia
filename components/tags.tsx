@@ -21,6 +21,7 @@ export default function Tags() {
             <h1>tags</h1>
             <ul>
                 {everyTag}
+                <li><Link href={`/`}>Editors Pick</Link></li>
             </ul>
         </div>
     )

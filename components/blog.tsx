@@ -3,6 +3,7 @@ import Image from "next/image";
 import Author from "./author";
 import style from "../styles/blog.module.scss"
 import { getPosts, getPostsByTags } from "../services/post.service";
+import Link from "next/link";
 export default function Blog(){
        let cards : any
        
@@ -16,7 +17,9 @@ export default function Blog(){
                     <h1>{card?.title}</h1>
                     <p>{card?.text?.substring(0,300)}...</p>
                     <div className={style.buttonGroup}>
-                        <button>Read More</button>
+                        <button>
+                            <Link href={`/article/${card?.id}`}>Read More</Link>
+                        </button>
                     </div>
                 </div>
             )

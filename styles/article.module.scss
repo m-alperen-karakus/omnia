@@ -1,0 +1,19 @@
+.article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0px;
+    gap: 24px;
+
+    .text{
+        margin: 0px 50px;
+    }
+    
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    opacity: 0.8;
+}
