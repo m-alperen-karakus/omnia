@@ -12,7 +12,6 @@
         padding: 64px 36px 32px;
         gap: 12px;
         background: #FFFFFF;
-        width: 40%;
 
         h4 {
             font-family: 'Comfortaa', cursive;
@@ -47,6 +46,13 @@
             a{
                 color: black;
             }
+        }
+
+        @media screen and (max-width:768px) {
+            padding: 36px 24px 28px ;
+            h4{ font-size: 14px; }
+            h1{ font-size: 24px; }
+            p{ font-size: 10px; }
         }
 
     }

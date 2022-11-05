@@ -2,17 +2,14 @@ import { getFeaturedPost, getPosts } from "../services/post.service";
 import style from "../styles/hero.module.scss";
 import Author from "./author";
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 export default function Hero() {
   const featuredPost = { ...getFeaturedPost()[0] };
   return (
-    <div
-      className={style.hero}
-      style={{ background: `url(${featuredPost.backgroundImageURL})` }}
-    >
-      <div className={style.card}>
+    <div className={style.hero} style={{ background: `url(${featuredPost.backgroundImageURL})` }} >
+      <div className={`${style.card} + col-12 col-sm-8 col-md-6 col-lg-5`}>
         <h4>FEATURED ARTICLE</h4>
         <h1>{featuredPost.title}</h1>
         <Author
@@ -29,3 +26,6 @@ export default function Hero() {
     </div>
   );
 }
+
+
+ 

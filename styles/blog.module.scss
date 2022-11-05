@@ -3,12 +3,16 @@ div.blog {
     align-items: center;
     flex-direction: column;
     gap: 48px;
-    h1{
-        margin:64px 0px 0px 0px;
-    }
+    padding-inline:20px;
+    justify-content: space-between;
+
+
+    h1.title{  margin:64px 0px 0px 0px; }
     div.cardsAndTag {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
 
         div.cards {
             display: flex;
@@ -19,7 +23,6 @@ div.blog {
             height: min-content;
             div.card {
                 display: flex;
-                width: 28%;
                 flex-direction: column;
                 gap: 18px;
                 padding: 12px;

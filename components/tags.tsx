@@ -17,7 +17,7 @@ export default function Tags() {
     })
 
     return (
-        <div className={style.tags}>
+        <div className={`${style.tags} col-md-2`}>
             <h1>tags</h1>
             <ul>
                 {everyTag}
