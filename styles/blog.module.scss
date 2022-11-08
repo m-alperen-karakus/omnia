@@ -13,7 +13,7 @@ div.blog {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-
+        
         div.cards {
             display: flex;
             flex-wrap: wrap;
@@ -26,8 +26,9 @@ div.blog {
                 flex-direction: column;
                 gap: 18px;
                 padding: 12px;
+                width: min-content;
                 height: min-content;
-                img {
+                .cardImg {
                     border-radius: 24px;
                 }
 

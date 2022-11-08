@@ -11,8 +11,8 @@ export default function Blog(){
            
            cards = getPosts().map((card)=>{
             return(
-                <div className={`${style.card} col-12 col-md-5 col-xl-3`} key= {card.id}>
-                    <Image src={card?.backgroundImageURL} width={400} height={200} />
+                <div className={`${style.card} col-12 col-md-5 col-xl-0`} key= {card.id}>
+                    <Image className={style.cardImg} src={card?.backgroundImageURL} width={400} height={200} layout="fixed" />
                     <Author {...{...card.author ,"minRead" : card.minRead }} key= {card.id}/>
                     <h1>{card?.title}</h1>
                     <p>{card?.text?.substring(0,300)}...</p>
@@ -34,7 +34,7 @@ export default function Blog(){
         <div className={style.blog}>
             <h1 className={style.title}>EDITORS PICK</h1>
         <div className={style.cardsAndTag}>
-            <div className={ `${style.cards} col-9`}>
+            <div className={ `${style.cards} col-10`}>
             {cards}
             </div>
             <Tags />

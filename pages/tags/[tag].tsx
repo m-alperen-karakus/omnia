@@ -18,7 +18,7 @@ export default function Tag() {
   const cards = getPostsByTags(`${tag}`).map(card => {
     return(
     <div className={style.card} key= {card.id}>
-          <Image src={card?.backgroundImageURL} width={400} height={200} />
+          <Image className={style.cardImg} src={card?.backgroundImageURL} width={400} height={200} layout="fixed"/>
           <Author {...{...card.author ,"minRead" : card.minRead }} key= {card.id}/>
           <h1>{card?.title}</h1>
           <p>{card?.text?.substring(0,300)}...</p>
@@ -33,8 +33,8 @@ export default function Tag() {
     <Hero />
     <div className={style.blog}>
       <h1>{upperCaseTag}</h1>
-      <div className={style.cardsAndTag}>
-        <div className={style.cards}>
+      <div className={`${style.cardsAndTag} col-12`}>
+        <div className={`${style.cards} col-10`}>
           {cards}
         </div>
         <Tags />
